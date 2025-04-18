@@ -1,21 +1,32 @@
 {
   "name": "reciply-ocr-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "train": "node train.js",
+    "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "ocr",
+    "machine-learning",
+    "computer-vision",
+    "receipt-scanning"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Enhanced OCR service with CNN architecture for receipt scanning",
   "dependencies": {
+    "@tensorflow/tfjs-node": "^4.10.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "multer": "^1.4.5-lts.2",
     "sharp": "^0.34.1",
     "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-image-snapshot": "^6.2.0"
   }
 }
